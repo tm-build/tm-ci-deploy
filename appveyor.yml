@@ -10,7 +10,7 @@ install:
   #- call git clone git@github.com:tm-build/tm-qa-azure.git
   - echo "...creating empty commit"
   #- curl --data "[tm-ci-workflow] about to trigger azure deployment" "https://securityinnovation.slack.com/services/hooks/slackbot?token=%SLACK_TOKEN%&channel=tm-deploy"
-  - npm install -g coffee-script
+  - npm install
   - coffee test.coffee
   - coffee ".\\src\\send-message.coffee"
   #- cd tm-qa-azure
