@@ -1,4 +1,4 @@
 install:
   - echo "ping"
-
+  - ping www.google.com
 build: off
