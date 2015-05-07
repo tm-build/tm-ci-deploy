@@ -6,8 +6,8 @@ install:
   - ps: $fileContent += $env:priv_key.Replace(' ', "`n")
   - ps: $fileContent += "`n-----END RSA PRIVATE KEY-----`n"
   - ps: Set-Content c:\users\appveyor\.ssh\id_rsa $fileContent
-  - git config user.email "tm-build@securityinnovation.com"
-  - git config user.name "tm-build"
+  - git config --global user.email "tm-build@securityinnovation.com"
+  - git config --global user.name "tm-build"
   - npm install > nul
   - npm install -g coffee-script > nul
 
