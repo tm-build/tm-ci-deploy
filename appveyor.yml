@@ -11,15 +11,15 @@ install:
   - echo "...creating empty commit"
   #- curl --data "[tm-ci-workflow] about to trigger azure deployment" "https://securityinnovation.slack.com/services/hooks/slackbot?token=%SLACK_TOKEN%&channel=tm-deploy"
   - npm install -g coffee-script
-  - dir
-  - ls
   - coffee -h
-  - coffee "src/send-message.coffee"
-  - coffee "src\send-message.coffee"
-  - cd tm-qa-azure
-  - call git commit --allow-empty -m "empty commit from Appveyor to trigger azure deployment"
-  - git push azure master
-  - cd ..
-  - echo "...done"
+  - coffee test.coffee
+  - coffee -e "console.log(42)"
+  #- coffee "src/send-message.coffee"
+  #- coffee "src\send-message.coffee"
+  #- cd tm-qa-azure
+  #- call git commit --allow-empty -m "empty commit from Appveyor to trigger azure deployment"
+  #- git push azure master
+  #- cd ..
+  #- echo "...done"
 
 build: off
