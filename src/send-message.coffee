@@ -8,9 +8,9 @@ console.log 'HERE'
 #'Content-Type': 'application/x-www-form-urlencoded'
 
 options =
-  url    : "https://securityinnovation.slack.com/services/hooks/slackbot?token=#{process.env.slack_token}%&channel=#tm-deploy"
+  url    : "https://securityinnovation.slack.com/services/hooks/slackbot?token=#{process.env.slack_token}&channel=%23tm-deploy"
 #  headers:
-  body   : '[tm-ci-workflow] about to trigger azure deployment'
+  body   : '[tm-ci-workflow] about to trigger azure deployment (from AppVeyor)'
 
 request.post options, (error, response, data)->
   log error
