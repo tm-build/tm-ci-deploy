@@ -8,7 +8,7 @@ console.log 'HERE'
 #'Content-Type': 'application/x-www-form-urlencoded'
 
 options =
-  url    : "https://securityinnovation.slack.com/services/hooks/slackbot?token=#{process.env.slack_token}%&channel=%23tm-deploy"
+  url    : "https://securityinnovation.slack.com/services/hooks/slackbot?token=#{process.env.slack_token}%&channel=#tm-deploy"
 #  headers:
   body   : '[tm-ci-workflow] about to trigger azure deployment'
 
@@ -22,4 +22,4 @@ request.post options, (error, response, data)->
 #  log 'all done'
 
 #- curl --data "[tm-ci-workflow] about to trigger azure deployment" "https://securityinnovation.slack.com/services/hooks/slackbot?token=%SLACK_TOKEN%&channel=tm-deploy"
-log "this is aaaa: #{process.env.slack_token.substring(5)}"
+log "this is aaaa: #{process.env.slack_token.substring(10)}"
