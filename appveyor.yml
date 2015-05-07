@@ -15,13 +15,11 @@ install:
   - git clone https://github.com/tm-build/tm-qa-azure.git
   - git remote -v
   - ls tm-qa-azure
-  - coffee "src\send-message.coffee" "2) Clone completed"
 
   - cd tm-qa-azure
-  - coffee "src\send-message.coffee" "3) About to trigger azure deployment"
+  - coffee "src\send-message.coffee" "2) About to trigger azure deployment"
   - call git commit --allow-empty -m "empty commit from Appveyor to trigger azure deployment"
   - git push origin master
-  - coffee "src\send-message.coffee" "4) Done..."
   #- cd ..
   #- echo "...done"
 
