@@ -7,15 +7,14 @@ install:
   - ps: $fileContent += "`n-----END RSA PRIVATE KEY-----`n"
   - ps: Set-Content c:\users\appveyor\.ssh\id_rsa $fileContent
 
-  - call git clone git@github.com:tm-build/tm-qa-azure.git
+  #- call git clone git@github.com:tm-build/tm-qa-azure.git
   - echo "...creating empty commit"
-  - curl --data "[tm-ci-workflow] about to trigger azure deployment" "https://securityinnovation.slack.com/services/hooks/slackbot?token=%SLACK_TOKEN%&channel=%23tm-deploy"
+  #- curl --data "[tm-ci-workflow] about to trigger azure deployment" "https://securityinnovation.slack.com/services/hooks/slackbot?token=%SLACK_TOKEN%&channel=tm-deploy"
+  - coffee src\send-message.coffee
   - cd tm-qa-azure
   - call git commit --allow-empty -m "empty commit from Appveyor to trigger azure deployment"
   - git push azure master
   - cd ..
   - echo "...done"
-  
-
 
 build: off

@@ -1,0 +1,23 @@
+{
+  "name": "tm-ci-worfklow",
+  "version": "0.0.1",
+  "description": "This repo contains the CI workflow to from a commit all the way to a deployed version",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tm-build/tm-ci-deploy.git"
+  },
+  "author": "Dinis Cruz <dinis.cruz@owasp.org> (http://blog.diniscruz.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tm-build/tm-ci-deploy/issues"
+  },
+  "homepage": "https://github.com/tm-build/tm-ci-deploy",
+  "dependencies": {
+    "coffee-script": "^1.9.2",
+    "fluentnode": "^0.3.9"
+  }
+}
