@@ -21,7 +21,7 @@ install:
   - coffee "src\send-message.coffee" "3) About to trigger azure deployment"
   - call git commit --allow-empty -m "empty commit from Appveyor to trigger azure deployment"
   - git push origin master
-
+  - coffee "src\send-message.coffee" "4) Done..."
   #- cd ..
   #- echo "...done"
 
