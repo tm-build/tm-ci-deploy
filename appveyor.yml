@@ -9,9 +9,9 @@ install:
 
   - git clone git@github.com:tm-build/tm-qa-azure.git
   - echo "...creating empty commit"
-  - curl --data "[tm-ci-workflow] about to trigger azure deployment" "https://securityinnovation.slack.com/services/hooks/slackbot?token=$slack_token&channel=%23tm-deploy"
+  - curl --data "[tm-ci-workflow] about to trigger azure deployment" $"https://securityinnovation.slack.com/services/hooks/slackbot?token=$slack_token&channel=%23tm-deploy"
   - cd tm-qa-azure
-  - call git commit --allow-empty -m 'empty commit from Appveyor to trigger azure deployment'
+  - call git commit --allow-empty -m "empty commit from Appveyor to trigger azure deployment"
   - git push azure master
   - cd ..
   - echo "...done"
