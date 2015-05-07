@@ -12,7 +12,7 @@ install:
   - npm install -g coffee-script > nul
 
   - coffee "src\send-message.coffee" "1) Starting TM CI Deploy"
-  - git clone https://github.com/tm-build/tm-qa-azure.git
+  - git clone git@github.com:tm-build/tm-qa-azure.git
   - git remote -v
   - ls tm-qa-azure
 
