@@ -17,7 +17,8 @@ install:
   - ls tm-qa-azure
 
   - cd tm-qa-azure
-  - coffee "src\send-message.coffee" "2) About to trigger azure deployment"
+  - ls
+  #- coffee "src\send-message.coffee" "2) About to trigger azure deployment"
   - call git commit --allow-empty -m "empty commit from Appveyor to trigger azure deployment"
   - git push origin master
   #- cd ..
