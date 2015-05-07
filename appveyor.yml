@@ -9,13 +9,12 @@ install:
   - git config user.email "tm-build@securityinnovation.com"
   - git config user.name "tm-build"
 
-  - ssh git@github.com
 
   - npm install > nul
   - npm install -g coffee-script > nul
 
   - coffee "src\send-message.coffee" "Starting TM CI Deploy"
-  - git clone git@github.com:tm-build/tm-qa-azure.git
+  - git clone https://github.com/tm-build/tm-qa-azure.git
   - git remote -v
   - ls tm-qa-azure
   - coffee "src\send-message.coffee" "Clone completed"
