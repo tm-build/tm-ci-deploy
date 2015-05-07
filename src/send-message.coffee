@@ -1,3 +1,3 @@
 require 'fluentnode'
 
-log 'this is from coffee'
+log "this is aaaa: #{process.env.aaaa}"
