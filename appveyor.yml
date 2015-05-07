@@ -12,7 +12,7 @@ install:
   - coffee "src\send-message.coffee" "About to trigger azure deployment"
   #- ssh git@github.com
   - git clone git@github.com:tm-build/tm-qa-azure.git
-  
+  - coffee "src\send-message.coffee" "Clone completed"
 
   #- curl --data "[tm-ci-workflow] about to trigger azure deployment" "https://securityinnovation.slack.com/services/hooks/slackbot?token=%SLACK_TOKEN%&channel=tm-deploy"
 
