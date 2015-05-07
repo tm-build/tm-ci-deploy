@@ -9,18 +9,19 @@ install:
   - npm install > nul
   - npm install -g coffee-script > nul
 
-  - coffee "src\send-message.coffee" "About to trigger azure deployment"
-  #- ssh git@github.com
+  - coffee "src\send-message.coffee" "Starting TM CI Deploy"
   - git clone git@github.com:tm-build/tm-qa-azure.git
+  - ls tm-qa-azure
   - coffee "src\send-message.coffee" "Clone completed"
- 
+
   #- curl --data "[tm-ci-workflow] about to trigger azure deployment" "https://securityinnovation.slack.com/services/hooks/slackbot?token=%SLACK_TOKEN%&channel=tm-deploy"
-
   #- node_modules/.bin/coffee test.coffee
-
   #- cd tm-qa-azure
-  #- call git commit --allow-empty -m "empty commit from Appveyor to trigger azure deployment"
-  #- git push azure master
+
+  - coffee "src\send-message.coffee" "About to trigger azure deployment"
+  - call git commit --allow-empty -m "empty commit from Appveyor to trigger azure deployment"
+  - git push azure master
+
   #- cd ..
   #- echo "...done"
 
