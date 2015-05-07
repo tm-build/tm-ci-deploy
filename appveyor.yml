@@ -14,8 +14,8 @@ install:
   - coffee -h
   - coffee test.coffee
   - coffee -e "console.log(42)"
-  #- coffee "src/send-message.coffee"
-  #- coffee "src\send-message.coffee"
+  - coffee "src//send-message.coffee
+  - coffee "src\\send-message.coffee
   #- cd tm-qa-azure
   #- call git commit --allow-empty -m "empty commit from Appveyor to trigger azure deployment"
   #- git push azure master
