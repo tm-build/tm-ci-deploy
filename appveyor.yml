@@ -1,4 +1,14 @@
 install:
-  - echo "ping"
-  - ping www.google.com
+  - ps: $fileContent = "-----BEGIN RSA PRIVATE KEY-----`n"
+  - ps: $fileContent += $env:priv_key.Replace(' ', "`n")
+  - ps: $fileContent += "`n-----END RSA PRIVATE KEY-----`n"
+  - ps: Set-Content c:\users\appveyor\.ssh\id_rsa $fileContent
+
+  - git clone git@github.com:tm-build/tm-qa-azure.git
+  - echo "...creating empty commit"
+  - cd tm-qa-azure
+  - git commit --allow-empty -m 'empty commit from Appveyor to trigger azure deployment'
+  - git push azure master
+  - cd ..
+  - echo "...done"
 build: off
