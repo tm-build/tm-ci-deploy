@@ -18,6 +18,7 @@
   "homepage": "https://github.com/tm-build/tm-ci-deploy",
   "dependencies": {
     "coffee-script": "^1.9.2",
-    "fluentnode": "^0.3.9"
+    "fluentnode": "^0.3.9",
+    "request": "^2.55.0"
   }
 }
