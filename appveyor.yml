@@ -13,6 +13,8 @@ install:
   - npm install -g coffee-script
   - dir
   - ls
+  - coffee -h
+  - coffee "src/send-message.coffee"
   - coffee "src\send-message.coffee"
   - cd tm-qa-azure
   - call git commit --allow-empty -m "empty commit from Appveyor to trigger azure deployment"
